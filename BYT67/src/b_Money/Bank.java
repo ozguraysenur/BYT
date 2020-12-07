@@ -107,7 +107,7 @@ public class Bank {
 	 * @throws AccountDoesNotExistException If one of the accounts do not exist
 	 */
 	public void transfer(String fromaccount, Bank tobank, String toaccount, Money amount) throws AccountDoesNotExistException {
-		if (!accountlist.containsKey(fromaccount) && !tobank.accountlist.containsKey(toaccount)) { //there should be and operator between 2 condition
+		if (!accountlist.containsKey(fromaccount) || !tobank.accountlist.containsKey(toaccount)) { 
 			throw new AccountDoesNotExistException();
 		}
 		else {
