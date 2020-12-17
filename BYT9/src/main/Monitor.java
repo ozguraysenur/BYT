@@ -6,9 +6,7 @@ import java.util.*;
 public class Monitor {
 
     private static final int PERIOD_MILLISECONDS = 1000;
-
-    private Map<Connection, Set<Observer>> _observers= new HashMap<>();
-
+    
     private List<Connection> connectionList =new ArrayList<>();
 
     public List<Connection> getconnectionList(){
